@@ -1,3 +1,19 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  position: relative;
+  a {
+    height: 500px;
+    &:first-child {
+      background-color: rgb(218,236,165);
+    }
+    background-color: rgb(255,243,159);
+    font-size: 28px;
+    img {
+      width: 180px;
+      margin-top: 50%;
+    }
+  }
+}

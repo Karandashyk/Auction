@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Total sum:</strong>
+  <%= @money.total_sum %>
+</p>
+
+<p>
+  <strong>Reserved sum:</strong>
+  <%= @money.reserved_sum %>
+</p>
+
+<%= link_to 'Edit', edit_money_path(@money) %> |
+<%= link_to 'Back', money_index_path %>

@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    @article = Article.find(params[:id])
+    @article = User.find(params[:id])
   end
 
   # POST /users

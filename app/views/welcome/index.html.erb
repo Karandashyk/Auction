@@ -1,13 +1,8 @@
-<header class="navbar navbar-fixed-top">
-  <div class="container">
-    <nav>
-      <li class="nav navbar-nav navbar-right">
-      <li><%= link_to "Home",   '#' %></li>
-      <li><%= link_to "Log in", '#' %></li>
-      </ul>
-    </nav>
-  </div>
-</header>
 <div class="container">
-<%= link_to "Sign up now!", signup_path , class: "btn btn-lg btn-primary" %>
+  <a class="col-xs-6">Add item
+    <%= image_tag("add.png", :alt => "add") %>
+  </a>
+  <a class="col-xs-6">Find item
+    <%= image_tag("search.png", :alt => "find") %>
+  </a>
 </div>

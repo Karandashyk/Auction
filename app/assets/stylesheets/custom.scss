@@ -3,21 +3,27 @@
 
 
 body {
-  padding-top: 60px;
+  background-color: rgb(231,240,242) !important;
+  position: relative;
+  * {
+    font-family: 'Handlee', 'sans-serif' !important;
+  }
 }
 
-section {
-  overflow: auto;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.center {
-  text-align: center;
-}
-
-.center h1 {
-  margin-bottom: 10px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(255,255,255);
+  position: relative;
+  top: 10px;
+  height: 120px;
+  width: 100%;
+  margin-bottom: 100px;
+  img {
+    width: 180px;
+  }
+  ul {
+    display: inline-flex;
+    padding: 25px;
+  }
 }
