@@ -1,8 +1,10 @@
 <div class="container">
-  <a class="col-xs-6">Add item
-    <%= image_tag("add.png", :alt => "add") %>
-  </a>
-  <a class="col-xs-6">Find item
-    <%= image_tag("search.png", :alt => "find") %>
-  </a>
+  <%= link_to 'products_path', class: "col-xs-6" do %>
+      <span>Add item</span>
+      <%= image_tag("add.png", :alt => "add") %>
+  <% end %>
+  <%= link_to 'product_path', class: "col-xs-6" do %>
+      <span>Search item</span>
+      <%= image_tag("search.png", :alt => "find") %>
+  <% end %>
 </div>

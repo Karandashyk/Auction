@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
+  devise_for :users
+  get 'persons/profile'
+
+  get '/about_us', to: 'welcome#about'
+  root 'welcome#index'
+
   resources :users_products
   resources :deals
   resources :money
   resources :locations
   resources :products
-  resources :users
-  devise_for :models
-  get '/about_us', to: 'welcome#about'
-  get  '/signup', to: 'users#new'
-  root 'welcome#index'
+  # resources :users
 end

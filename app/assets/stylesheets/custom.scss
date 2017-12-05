@@ -22,8 +22,14 @@ body {
   img {
     width: 180px;
   }
-  ul {
+  ul.nav {
     display: inline-flex;
     padding: 25px;
+    > li {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
