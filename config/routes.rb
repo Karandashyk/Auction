@@ -10,5 +10,4 @@ Rails.application.routes.draw do
   resources :money
   resources :locations
   resources :products
-  # resources :users
 end

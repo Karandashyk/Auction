@@ -1,9 +1,9 @@
 <div class="container">
-  <%= link_to 'products_path', class: "col-xs-6" do %>
+  <%= link_to new_product_path, class: "col-xs-6" do %>
       <span>Add item</span>
       <%= image_tag("add.png", :alt => "add") %>
   <% end %>
-  <%= link_to 'product_path', class: "col-xs-6" do %>
+  <%= link_to products_path, class: "col-xs-6" do %>
       <span>Search item</span>
       <%= image_tag("search.png", :alt => "find") %>
   <% end %>
