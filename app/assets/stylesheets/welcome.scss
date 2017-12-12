@@ -2,18 +2,37 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.container {
-  position: relative;
+.wrapper {
   a {
-    height: 500px;
-    &:first-child {
-      background-color: rgb(218,236,165);
-    }
-    background-color: rgb(255,243,159);
+    position: relative;
     font-size: 28px;
+
+    &:first-child {
+      padding-top: 15px;
+    }
+    &:hover {
+      text-decoration: none;
+      background-color: inherit !important;
+      span {
+        display: block;
+        background: rgba(0,0,0,0.5);
+        cursor: pointer;
+      }
+    }
+    span {
+      display: none;
+      color: rgb(220, 221, 222);
+      text-align: center;
+      padding-top: 45%;
+      position: absolute;
+      width: 95%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
     img {
-      width: 180px;
-      margin-top: 50%;
+      width: 20vw;
+      margin: 3px;
     }
   }
 }
