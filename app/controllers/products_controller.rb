@@ -6,6 +6,15 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
   end
+  
+  # GET /products/filter
+  # GET /products/filter.json
+  def filter
+    @products = Product.all
+    filtering_params.each_pair do |filter, value|
+      @products = @products.send(filter.to_s, value)
+    end
+  end
 
   # GET /products/1
   # GET /products/1.json
@@ -70,5 +79,9 @@ class ProductsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
       params.require(:product).permit(:name)
+    end
+    
+    def filtering_params
+      params.fetch(:filter, {}).permit(:location, :category, :price, :mode)
     end
 end
