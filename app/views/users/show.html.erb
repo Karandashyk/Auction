@@ -1,27 +1,16 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>-->
+<div class="information wrapper container-fluid">
 
-<p>
-  <%= gravatar_for @user %>
-</p>
-<p>
-  <strong>Nickname:</strong>
-  <%= @user.nickname %>
-</p>
+  <p class="gravatar-wrapper">
+    <%= gravatar_for @user %>
+  </p>
+  <div class="col-xs-offset-2 col-xs-8">
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+    <strong>Nickname:</strong>
+    <%= @user.nickname %>
 
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </div>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @user.phone %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+</div>

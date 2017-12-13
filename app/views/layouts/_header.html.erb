@@ -1,23 +1,24 @@
 <div class="header">
-  <%= link_to image_tag("logo.svg", :alt => "logo"), root_path %>
+  <%= link_to image_tag("logo.svg", :alt => "logo"), root_path%>
 
   <ul class="nav">
     <li class="nav-item">
       <%= link_to "About us", about_us_path %>
     </li>
     <li class="nav-item">
-      <%= link_to "Add item", '#' %>
+      <%= link_to "Add item", new_product_path %>
     </li>
     <li class="nav-item">
       <% if user_signed_in? %>
-          Logged in as <%= current_user.email %>.
+          <%= link_to current_user do %>
+            <%= current_user.nickname %>
+            <%= gravatar_for current_user %>
+          <% end %>
           <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
       <% else %>
           <%= link_to "Sign up", new_user_registration_path %> or
-          <%= link_to "log in", new_user_session_path %>
+          <%= link_to "Log in", new_user_session_path %>
       <% end %>
     </li>
   </ul>
 </div>
-<!--<img id="gif" class="nlSABoG9CSaJpsufv8WW9 _3vYn8QjoEvrXxHyqdn9ddZ _2XBDTIVigBJDybhZvL-hU3" src="https://media.giphy.com/media/HuEINu2RE2sKs/200w.webp" srcset="https://media.giphy.com/media/HuEINu2RE2sKs/200w.webp 200w,-->
-            <!--https://media.giphy.com/media/HuEINu2RE2sKs/giphy.webp 480w" sizes="100vw" alt="">-->

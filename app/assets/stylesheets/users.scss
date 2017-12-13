@@ -1,3 +1,35 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.registration {
+  h2 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .form-wrapper {
+    input {
+      width: 100%;
+      outline: none;
+      border: none;
+      height: 30px;
+      padding: 3px 10px;
+    }
+    .actions {
+      margin-top: 50px;
+      input {
+        background-color: rgb(167,194,203);
+      }
+    }
+  }
+}
+.information {
+  .gravatar-wrapper {
+    text-align: center;
+    .gravatar {
+      width: 10vw;
+      height: 10vw;
+      border: 0.7vw solid rgb(61,59,63);
+    }
+  }
+}
