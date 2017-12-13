@@ -4,13 +4,15 @@
   <p class="gravatar-wrapper">
     <%= gravatar_for @user %>
   </p>
-  <div class="col-xs-offset-2 col-xs-8">
-
-    <strong>Nickname:</strong>
-    <%= @user.nickname %>
-
-    <strong>Email:</strong>
-    <%= @user.email %>
+  <div class="col-xs-offset-3 col-xs-6 fields-wrapper">
+    <div class="field ">
+      <span>Nickname:</span>
+      <%= @user.nickname %>
+    </div>
+    <div class="field ">
+      <span>Email:</span>
+      <%= @user.email %>
+    </div>
   </div>
 
 </div>

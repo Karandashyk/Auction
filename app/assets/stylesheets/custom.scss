@@ -48,8 +48,13 @@ body {
       a {
         color: rgb(61,59,63);
         &:hover {
-          color: rgb(167,194,203);
-          text-decoration: underline;
+          span {
+            text-decoration: underline;
+            color: rgb(167,194,203);
+          }
+        }
+        span {
+          margin-right: 5px;
         }
       }
     }
@@ -63,12 +68,12 @@ body {
   background-position: 0 -5px;
   position: fixed;
   bottom: 0;
-  height: 5vh;
+  height: 3vh;
   width: 100%;
   span {
     float: right;
     color: #000;
-    margin: 10px 20px;
+    margin: 5px 50px;
     a {
       color: #000;
       &:visited {

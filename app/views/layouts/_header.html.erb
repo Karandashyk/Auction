@@ -3,21 +3,36 @@
 
   <ul class="nav">
     <li class="nav-item">
-      <%= link_to "About us", about_us_path %>
+      <%= link_to about_us_path do %>
+        <span>About us</span>
+      <% end %>
     </li>
     <li class="nav-item">
-      <%= link_to "Add item", new_product_path %>
+      <%= link_to locations_path do %>
+        <span>Locations map</span>
+      <% end %>
+    </li>
+    <li class="nav-item">
+      <%= link_to new_product_path do %>
+        <span>Add item</span>
+      <% end %>
     </li>
     <li class="nav-item">
       <% if user_signed_in? %>
           <%= link_to current_user do %>
-            <%= current_user.nickname %>
+              <span><%= current_user.nickname %></span>
             <%= gravatar_for current_user %>
           <% end %>
-          <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+          <%= link_to destroy_user_session_path, :method => :delete do %>
+            <span>Log out</span>
+          <% end %>
       <% else %>
-          <%= link_to "Sign up", new_user_registration_path %> or
-          <%= link_to "Log in", new_user_session_path %>
+          <%= link_to new_user_registration_path do %>
+              <span>Sign up</span>
+          <% end %> or
+          <%= link_to new_user_session_path do %>
+              <span>Log in</span>
+          <% end %>
       <% end %>
     </li>
   </ul>

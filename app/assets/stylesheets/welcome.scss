@@ -2,12 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.wrapper {
+.welcome {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15vh;
+  position: relative;
+  img {
+    width: 18vw;
+    margin: 3px;
+  }
+  video {
+    width: 40vw;
+    margin: 3px;
+  }
   a {
-    position: relative;
-    padding: 20px 40px;
-    &:first-child {
-      padding-top: 35px;
+    position: absolute;
+    height: 150%;
+    &:last-child {
+      left: 50%;
     }
     &:hover {
       text-decoration: none;
@@ -30,10 +44,7 @@
       left: 0;
       top: 0;
     }
-    img {
-      width: 20vw;
-      margin: 3px;
-    }
+
   }
 }
 
@@ -47,6 +58,6 @@
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 20px;
-    padding: 10px 25px;
+    padding: 20px 25px;
   }
 }
