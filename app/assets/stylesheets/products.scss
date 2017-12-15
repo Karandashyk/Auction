@@ -18,18 +18,41 @@
       font-size: 30px;
       text-align: center;
       padding-top: 3%;
-      background-color: rgba(219,234,237,0.4);
+      background-color: rgba(219,234,237,0.6);
       color: #000;
     }
     img {
       width: calc(100vw/11);
     }
   }
+  .filter {
+    height: 40vh;
+    position: fixed;
+    margin-top: 10vh;
+    background-color: rgba(166,193,202,0.6);
+    padding: 40px 20px;
+    >span {
+      font-size: 30px;
+      margin-bottom: 45px;
+      display: block;
+    }
+    .filter-item {
+      margin: 10px 0;
+    }
+  }
   .products-table {
     margin-top: 10vh;
     .item {
       padding: 20px 10px;
-      background-color: rgba(220,221,222,0.5);
+      background-color: rgba(219,234,237,0.5);
+      border-right: 1px dashed;
+      border-bottom: 1px dashed;
+      &:nth-child(3n) {
+        border-right: none;
+      }
+      a {
+        float: right;
+      }
       img {
         width: 50%;
         margin-bottom: 15px;
@@ -39,8 +62,60 @@
         &.name {
           font-size: 20px;
           text-transform: uppercase;
+          display: inline;
+          margin: 25px;
+        }
+        span {
+
         }
       }
     }
   }
+}
+.information {
+  .img-wrapper {
+    text-align: center;
+    img {
+      width: 20vw;
+      height: 20vw;
+      border: 0.7vw solid rgb(61, 59, 63);
+    }
+  }
+  .field {
+    .name {
+      font-size: 30px;
+    }
+  }
+  .products-fields-wrapper {
+    input {
+      border: none;
+      outline: none;
+      margin: 20px 0;
+    }
+    button {
+      border: none;
+      background-color: rgb(166,193,202);
+      padding: 5px 10px;
+    }
+  }
+}
+.producer-rate {
+  height: 40vh;
+  position: fixed;
+  margin-top: -15vh;
+  right: 0;
+  background-color: rgba(166,193,202,0.6);
+  padding: 40px 20px;
+  >span {
+    font-size: 30px;
+    margin-bottom: 45px;
+    display: block;
+  }
+  .rate {
+    background: url("star.png") repeat-x;
+    background-size: 20%;
+    height: 35px;
+    width: 95%;
+  }
+
 }

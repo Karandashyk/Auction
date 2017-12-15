@@ -59,6 +59,42 @@ body {
       }
     }
   }
+
+  .user {
+    .user-dropdown {
+      display: none;
+      position: absolute;
+      left: -55px;
+      top: 11vh;
+      background-color: #fff;
+      list-style: none;
+      padding-left: 0;
+      width: 15vw;
+      z-index: 100;
+      li {
+        padding: 15px 20px;
+        position: relative;
+        &.message {
+          &:after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgb(255,0,0);
+            position: absolute;
+            top: 18px;
+            left: 10vw;
+          }
+        }
+      }
+    }
+    &:hover {
+      .user-dropdown {
+        display: block;
+
+      }
+    }
+  }
 }
 .footer {
   background-color: rgb(255,255,255);

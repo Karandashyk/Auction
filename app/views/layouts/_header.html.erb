@@ -19,9 +19,15 @@
     </li>
     <li class="nav-item">
       <% if user_signed_in? %>
-          <%= link_to current_user do %>
+          <%= link_to current_user, class: 'user' do %>
               <span><%= current_user.nickname %></span>
-            <%= gravatar_for current_user %>
+              <%= gravatar_for current_user %>
+              <ul class="user-dropdown">
+                <li>My products / purchases</li>
+                <!--<li>My purchases</li>-->
+                <li class="message">Messages</li>
+                <li>Add money</li>
+              </ul>
           <% end %>
           <%= link_to destroy_user_session_path, :method => :delete do %>
             <span>Log out</span>
@@ -36,4 +42,8 @@
       <% end %>
     </li>
   </ul>
+
+
+
+
 </div>
