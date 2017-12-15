@@ -1,4 +1,4 @@
-<!--<p id="notice"><%= notice %></p>-->
+<!--<p id="notice"><%#= notice %></p>-->
 <div class="products wrapper container-fluid">
 <div class="showcase">
   <%= image_tag("cooking.jpg", alt: "cooking") %>
@@ -14,28 +14,47 @@
   <span>Let's study...</span>
 </div>
 <!--<h1>Products</h1>-->
+<div class="filter col-xs-2">
+  <%= search_form_for @search, url: search_products_path, method: :post do |f| %>
+      <!--<%#= f.condition_fields do |c| %>-->
+          <!--<%#= render "condition_fields", f: c %>-->
+      <!--<%# end %>-->
+      <!--<p><%#= link_to_add_fields "Add Conditions", f, :condition %></p>-->
+      <div class="field">
+        Sort:
+        <%= f.sort_fields do |s| %>
+            <%= s.sort_select %>
+        <% end %>
+      </div>
+      <div class="actions"><%= f.submit "Search" %></div>
+  <% end %>
+</div>
 
-<table class="col-xs-8 col-xs-offset-2">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Category</th>
-      <th>Price</th>
-      <th>Mode</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.category %></td>
-        <td><%= product.start_price %></td>
-        <td><%= product.mode %></td>
-      </tr>
+<div class="col-xs-8 col-xs-offset-1 products-table">
+    <% @products.each.with_index do |product, index| %>
+      <div class="item col-xs-4">
+        <%= image_tag("#{product.name}.jpg") %>
+        <p class="name"><%= product.name %></p>
+        <p>Category: <%= product.category %></p>
+        <p>Price: <%= product.start_price %></p>
+        <%= link_to 'Show', product %>
+      </div>
     <% end %>
-  </tbody>
-</table>
+</div>
+  <!--<table id="products">-->
+    <!--<tr>-->
+      <!--<th><%#= sort_link @search, :name, "Product Name" %></th>-->
+      <!--<th><%#= sort_link @search, :released_on, "Release Date" %></th>-->
+      <!--<th><%#= sort_link @search, :price, "Price" %></th>-->
+    <!--</tr>-->
+    <!--<%# @products.each do |product| %>-->
+        <!--<tr>-->
+          <!--<td><%#= link_to(product.name, product) %></td>-->
+          <!--<td><%#= product.released_on.strftime("%B %e, %Y") %></td>-->
+          <!--<td><%#= number_to_currency(product.price) %></td>-->
+        <!--</tr>-->
+    <!--<%# end %>-->
+  <!--</table>-->
 
 </div>
 <!--<%# link_to 'New Product', new_product_path %>-->

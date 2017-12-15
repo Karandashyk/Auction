@@ -10,5 +10,7 @@ Rails.application.routes.draw do
   resources :deals
   resources :money
   resources :locations
-  resources :products
+  resources :products do
+    collection { post :search, to: 'products#index' }
+  end
 end

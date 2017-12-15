@@ -25,7 +25,22 @@
       width: calc(100vw/11);
     }
   }
-  table {
+  .products-table {
     margin-top: 10vh;
+    .item {
+      padding: 20px 10px;
+      background-color: rgba(220,221,222,0.5);
+      img {
+        width: 50%;
+        margin-bottom: 15px;
+      }
+      p {
+        width: 100%;
+        &.name {
+          font-size: 20px;
+          text-transform: uppercase;
+        }
+      }
+    }
   }
 }
